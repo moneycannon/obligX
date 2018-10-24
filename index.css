@@ -1,0 +1,65 @@
+/*Her sørger jeg for at margin og padding blir nullstilt. Samtidig sentrerer jeg all contenten*/
+*{
+  margin: 0;
+  padding:0;
+  text-align: center;
+}
+
+
+/*HER LIGGER ALL CSS TIL HEADEREN*/
+#mainheader{
+  background-color: #2b2b2b;
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#logoTopV{
+
+}
+
+
+#mainnav{
+margin-top: 1%;
+display: flex;
+justify-content: space-between;
+width: 50%;
+}
+
+#mainnav a{
+  text-decoration: none;
+  color: white;
+}
+
+#omOss{
+flex-grow: 1;
+}
+
+#sjekkVæret{
+flex-grow: 1;
+}
+
+
+
+
+/*HER LIGGER ALL CSS TIL MAINCONTENT*/
+main{
+  background-color: red;
+  width: 60%;
+  margin:auto;
+  
+}
+
+
+
+/*HER LIGGER ALL CSS TIL SIDESEKSJONEN*/
+#sideseksjon{
+  background-color: yellow;
+  position: absolute;
+  right: 1%;
+  top: 21%;
+  width: 15%;
+}
