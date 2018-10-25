@@ -1,14 +1,24 @@
 /*Her sørger jeg for at margin og padding blir nullstilt. Samtidig sentrerer jeg all contenten*/
-*{
+* {
   margin: 0;
-  padding:0;
+  padding: 0;
   text-align: center;
+  font-family: 'Oswald', sans-serif;
+  max-width: 100%;
+  color: rgb(220,220,220);
 }
 
+body {
+  background-image: url("Bakgrunn.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /*HER LIGGER ALL CSS TIL HEADEREN*/
-#mainheader{
-  background-color: #2b2b2b;
+#mainheader {
+  background-color: #001E3C;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   max-width: 100%;
   margin-top: 0;
   margin-bottom: 15px;
@@ -17,49 +27,147 @@
   justify-content: space-between;
 }
 
-#logoTopV{
-
+#logoTop {
+  max-width: 150px;
+  max-height: 100px;
 }
 
-
-#mainnav{
-margin-top: 1%;
-display: flex;
-justify-content: space-between;
-width: 50%;
+#mainnav {
+  margin-top: 1.5%;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  font-size: 2rem;
 }
 
-#mainnav a{
+#mainnav a {
   text-decoration: none;
   color: white;
 }
 
-#omOss{
-flex-grow: 1;
+#omOss {
+  flex-grow: 1;
 }
 
-#sjekkVæret{
-flex-grow: 1;
+#sjekkVæret {
+  flex-grow: 1;
 }
-
-
-
 
 /*HER LIGGER ALL CSS TIL MAINCONTENT*/
-main{
-  background-color: red;
+main {
+  background-color: rgba(0,30,60, 0.9);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
   width: 60%;
-  margin:auto;
-  
+  margin: auto;
+  padding: 5px;
+  padding-left: 10px;
+  margin-bottom: 15px;
 }
 
+.omDaily {
+  margin-bottom: 50px;
+}
 
+.artikkelMainHeader {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
 
+.omOsstxt {
+  text-align: left;
+  margin-bottom: 10%;
+  font-size: 1.4rem;
+}
+
+#varNaatxt{
+  margin-bottom: 1%;
+}
+
+#txtBy {
+  padding: 8px;
+  padding-left: 30px;
+  margin-right: 50px;
+  margin-bottom: 15px;
+}
+
+/*Her har jeg hentet ut en knapp fra siden http://buttonoptimizer.com/ . Det er derfor en enorm mengde kode*/
+#btnSjekk {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 15px;
+  padding: 12px 24px;
+  border: 1px solid #217ae8;
+  border-radius: 10px;
+  background: #4a68ff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4a68ff), to(#dbcf51));
+  background: -moz-linear-gradient(top, #4a68ff, #dbcf51);
+  background: linear-gradient(to bottom, #4a68ff, #dbcf51);
+  text-shadow: #591717 1px 1px 1px;
+  font: normal normal bold 20px arial;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#btnSjekk:hover,
+#btnSjekk:focus {
+  border: 1px solid #2b9fff;
+  background: #597dff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#597dff), to(#fff861));
+  background: -moz-linear-gradient(top, #597dff, #fff861);
+  background: linear-gradient(to bottom, #597dff, #fff861);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#btnSjekk:active {
+  background: #2c3e99;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2c3e99), to(#dbcf51));
+  background: -moz-linear-gradient(top, #2c3e99, #dbcf51);
+  background: linear-gradient(to bottom, #2c3e99, #dbcf51);
+}
+
+#btnSjekk:before {
+  content: "\0000a0";
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+  margin: 0 4px -6px -4px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACqklEQVRIibWVT0gUYRjGf++3y7gKShAJhdpSJBUUFKy4OzcRiogiogiiS0GHMCW6ZCQhdrEgsLr1D4kOQZc8FHRoC3w1SCKhQ0R/NArKLl1a3M2+t8MajNqK7dZzmZmH4ffMM99870AFynve5z2HF7snXkmACEmg4b8FmDEBfPx9XfiJM6EXiFc5uhcNGBkZwczqgTWAA96IyFQmk8F7+AH1ZhwS+FbwBIGjYMJZ4Axw7jdH5oOz2SxBELQDPUAm8hAzwNOqxKcLm7bs3wfsFwgADN4BJ4BmoFagN3D4BQGjo6POe98LnAYmgOsi8tzMALYCR0R8clXDjemVDTdrEBArUsyYAfZWOYaizDkBqtoBXAauAcfDMJye99oSZjYgwtHG5MVcbd2LuPeBq66e9LF4LjDjHcaGqhiFBQGqWg+8BR4De8IwnPnT2qiqA+4BO0UEM8O5gl++4sF04+orgXO5LQgtIqw2YzK6yAeAGqC7FBwgDEOvqt1Awcxui0jO+2Db1y+7j+W+N/vk2r666prJHjOSwES0wR1gaywWW9fa2lqKX1KqumO22XnnXE86nfZQ/PxQ1Y1Aq4h8LgcO4Jy7DzwUkVPe+yezTJyqJoEskDCzq2XRgXQ6jYh0mdlJEWkGsqqaFFW9BewSkVQmk3ldbkBUqtoMPAOGHLADuPuv4ABhGL4G7gLbHVAHTP0reERTwDIHvATaVLWiwRfV8PBwHGgDXjpgQERagH5VTVQKV9WEiPQDLcCAzO7MAaCDYq1XgBcpbhEzY6nnZuaA9UA9cMXMugRgbGyMfD7fDhwEmgBXZoAHPgC3giB4lEqlSvTsHG+jc7ytYp/SP5ye2eOjCv3iqFioyBTvHB+kc3xwyf48lWrQFwlr+jt/KQGXNkerfgD7G3+OfgFtCB4IB3X/bAAAAABJRU5ErkJggg==") no-repeat left center transparent;
+  background-size: 100% 100%;
+}
+
+/*HER STOPPER KNAPPEN!!!!!!*/
 /*HER LIGGER ALL CSS TIL SIDESEKSJONEN*/
-#sideseksjon{
-  background-color: yellow;
+#sideseksjon {
+  background-color: #2b2b2b;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: absolute;
   right: 1%;
   top: 21%;
   width: 15%;
+  border-radius: 5px;
+}
+
+
+
+
+
+/*UNDER HER LIGGER ALL CSS TIL FOOTER*/
+#mainFooter{
+  background-color: #001E3C;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 100%;
+}
+
+
+
+
+#footerTxt{
+  font-size: 1.2rem;
 }

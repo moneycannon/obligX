@@ -3,56 +3,75 @@
 
 <head>
   <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <title>DailyWeather - Forside</title>
   <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
-</head>
+  <script src="index.js"></script>
+
+  </script>
 </head>
 
 <body>
   <!--HEADER-->
   <header id="mainheader">
-    <img id="logoTopV" src="logo11.png" alt="logo">
+    <img id="logoTop" src="DW-logo.svg" alt="logo">
     <nav id="mainnav">
-      <a id="omOss" href="#">OM OSS</a>
-      <a id="sjekkVæret" href="#">SJEKK VÆRET</a>
+      <a id="omOss" href="#">ABOUT US</a>
+      <a id="sjekkVæret" href="#">CHECK THE WEATHER</a>
     </nav>
-    <img id="logoTopH" src="logo11.png" alt="logo">
+    <img id="logoTop" src="DW-logo.svg" alt="logo">
   </header>
 
 
   <!--MAINCONTENT-->
   <main>
     <article class="omDaily">
-      <h1>OM OSS</h1>
-      <h2>DU SPØR, VI SJEKKER</h2>
-      <p>Ved hjelp av Open Weather Map kan vi gi deg den mest presise værmeldingen du kan få.
-          I følge thisisnotbullshit.com er vi den den mest presise værmelding-siden du kan sjekke med hele 99,9% perfekte værmeldinger!
+      <h1 class="artikkelMainHeader">ABOUT US</h1>
+      <h2>YOU ASK, WE CHECK!</h2>
+      <p class="omOsstxt">With great help from Open Weather Map we have the possibility to give you the most precise weather broadcast in the world!
+        According to thisisnotbullshit.com are we <strong>the most precise weather broadcast site on mother earth with a total of 99.9% perfect weather broadcasts.</strong>
+        We hope that you will enjoy our page as much as you enjoy the result of your search.
       </p>
-      <h2>HISTORIEN</h2>
-      <p>
-        Været har alltid vært en viktig faktor for oss mennesker siden tidenes morgenen. Vi har alltid hatt et behov for å kartlegge værsituasjonen i forhold til dagens gjøremål og hvordan de skal utføres.
-        Dermed ble flere forskjellige værsider startet.
+
+      <h2>OUR HISTORY</h2>
+      <p class="omOsstxt">
+        Weather have always been an important factor for us humans. All the way back to the early morning weather decided the daily activities to us humans. But as a difference from them, we can actually check the weather by just clicking on our
+        phone.
         <br>
-        Selv om forskjellige værsider har vært tilgjengelig en god stund fant IT-studenten Jan Thomas Tinborg ut at han skulle gi en bedre løsning til folket.
-        24 Oktober 2018 ble dette et faktum da han stiftet bedriften DailyWeather. Med DailyWeather ønsker Mr.Trinborg å gi folket en stilfull og effektiv måte å sjekke været på.
+        Even tho we have hundreds of different weather broadcast online, the it-student Jan Thomas Trinborg decided to create a better and more stylish way to check the weather.
+        On 24. October 2018 this dream became true when he started the company DailyWeather.
       </p>
 
       <h2>
-        DAILYWEATHER`S MÅL
+        DAILYWEATHER`S GOAL
       </h2>
-      <p>
-        Vi håper å en dag kunne gi alle den beste løsningen til å sjekke været der du er, uansett hvor du befinner deg.
-        Vi ønsker også å kunne gi den mest presise værmeldingen slik at du noensinne tenker å være bekymret for hva slags vær som skal prege din dag.
+      <p class="omOsstxt">
+        DailyWeather wishes to give you the most precise weather broadcast and at the same time give them a smooth experience that you can enjoy!
       </p>
+    </article>
+
+    <article class="varmeldingNaa">
+      <h1 class="artikkelMainHeader">CHECK THE CURRENT WEATHER</h1>
+      <p id="varNaatxt" class="omOsstxt">Do you wish to check the current weather where you are now? Or maybe the current weather at the other side of the globe? Just write in the city you want to check the weather in and hit "CHECK WEATHER" and we will do the
+        rest!</p>
+      <form class="varmeldingNaaForm" action="index.html">
+        <input id="txtBy" type="text" placeholder="city">
+        <button id="btnSjekk" type="button">CHECK WEATHER</button>
+      </form>
     </article>
 
   </main>
 
   <!--SIDESEKSJON-->
   <aside id="sideseksjon">
-    <p>dis is side yez</p>
+    <p>Wish to get information from us? Follow us on twitter!</p>
+    <!--Her har jeg hentet ut twitter sitt eget forslag på knapp til dem. Samtidig har jeg også ordnet slik at man følger min gamerkonto siden jeg ikke ønsket å opprette et værkonto på twitter-->
+    <a href="https://twitter.com/Moneycannon1?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @Moneycannon1</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </aside>
+
+  <footer id="mainFooter">
+<p id="footerTxt">Something you wonder about? Contact us: e-mail: jan.t.trinborg@hiof.no</p>
+  </footer>
 </body>
 
 </html>
