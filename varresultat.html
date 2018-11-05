@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <title>DailyWeather - Forside</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="index.js"></script>
+
+</head>
+
+<body>
+  <!--HEADER-->
+  <header id="mainheader">
+    <img id="logoTop" src="DW-logo.svg" alt="logo">
+    <nav id="mainnav">
+      <a id="omOss" href="index.html">MAINPAGE</a>
+      <a id="sjekkVæret" href="varresultat.html">CHECK THE WEATHER</a>
+    </nav>
+    <img id="logoTop" src="DW-logo.svg" alt="logo">
+  </header>
+
+
+  <!--MAINCONTENT-->
+  <main class="sjekkVaerContainer">
+
+
+    <article class="varInfo">
+      <h1 class="artikkelMainHeader">THE CURRENT WEATHER</h1>
+      <p class="omOsstxt">Wonder about what the weather is in a city on the other side of the globe? Just write the cityname in the inputbox and click "CHECK WEATHER" and see the magic happen!</p>
+    </article>
+
+    <article class="varContainerInput">
+      <input id="txtBy" type="text" placeholder="oslo">
+      <br>
+      <button id="btnSjekk" type="button">CHECK WEATHER</button>
+    </article>
+
+    <article class="varContainerOutput">
+      <h2 id="byNavn"></h2>
+      <img class="ikon">
+      <p class="weather" id="vaer"></p>
+      <p class="temp" id="temperatur"></p>
+    </article>
+
+  </main>
+
+  <!--SIDESEKSJON-->
+  <aside id="sideseksjon">
+    <p>Wish to get information from us? Follow us on twitter!</p>
+    <!--Her har jeg hentet ut twitter sitt eget forslag på knapp til dem. Samtidig har jeg også ordnet slik at man følger min gamerkonto siden jeg ikke ønsket å opprette et værkonto på twitter-->
+    <a href="https://twitter.com/Moneycannon1?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @Moneycannon1</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </aside>
+
+  <footer id="varFooter">
+    <p id="footerTxt">Something you wonder about? Contact us: e-mail: jan.t.trinborg@hiof.no</p>
+  </footer>
+</body>
+
+</html>

@@ -6,7 +6,20 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <title>DailyWeather - Forside</title>
   <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
-  <script src="index.js"></script>
+  <script>
+
+window.onload = oppstart;
+
+function oppstart(){
+  document.getElementById("btnSjekk").onclick = varSjekk;
+}
+
+
+function varSjekk(){
+  var by = document.getElementById("txtBy").value;
+
+  localStorage.setItem("by");
+}
 
   </script>
 </head>
@@ -16,8 +29,8 @@
   <header id="mainheader">
     <img id="logoTop" src="DW-logo.svg" alt="logo">
     <nav id="mainnav">
-      <a id="omOss" href="#">ABOUT US</a>
-      <a id="sjekkVæret" href="#">CHECK THE WEATHER</a>
+      <a id="omOss" href="#omDaily1">ABOUT US</a>
+      <a id="sjekkVæret" href="varresultat.html">CHECK THE WEATHER</a>
     </nav>
     <img id="logoTop" src="DW-logo.svg" alt="logo">
   </header>
@@ -25,7 +38,7 @@
 
   <!--MAINCONTENT-->
   <main>
-    <article class="omDaily">
+    <article class="omDaily" id="omDaily1">
       <h1 class="artikkelMainHeader">ABOUT US</h1>
       <h2>YOU ASK, WE CHECK!</h2>
       <p class="omOsstxt">With great help from Open Weather Map we have the possibility to give you the most precise weather broadcast in the world!
@@ -52,11 +65,7 @@
 
     <article class="varmeldingNaa">
       <h1 class="artikkelMainHeader">CHECK THE CURRENT WEATHER</h1>
-      <p id="varNaatxt" class="omOsstxt">Do you wish to check the current weather where you are now? Or maybe the current weather at the other side of the globe? Just write in the city you want to check the weather in and hit "CHECK WEATHER" and we will do the
-        rest!</p>
-      <form class="varmeldingNaaForm" action="index.html">
-        <input id="txtBy" type="text" placeholder="city">
-        <button id="btnSjekk" type="button">CHECK WEATHER</button>
+      <p id="varNaatxt" class="omOsstxt">Do you wish to check the current weather where you are now? Or maybe the current weather at the other side of the globe? Click on "CHECK WEATHER" below.</p>
       </form>
     </article>
 
