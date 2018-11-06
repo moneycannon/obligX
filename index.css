@@ -1,3 +1,4 @@
+/*/////////////////////////////////// GLOBAL CONTENT////////////////////////////////////////////////////////////////////////////*/
 /*Her sørger jeg for at margin og padding blir nullstilt. Samtidig sentrerer jeg all contenten*/
 * {
   margin: 0;
@@ -7,34 +8,57 @@
   max-width: 100%;
   color: rgb(220,220,220);
 }
-
+/*Her henter jeg ut bakgrunnsbilde og sørger for at det dekker hele siden*/
 body {
   background-image: url("bakgrunn.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  display: grid;
+  grid-auto-rows: "1fr 1fr 1fr 1fr";
+  grid-template-areas:
+  "header"
+  "main"
+  "sideseksjon"
+  "footer";
 }
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-/*HER LIGGER ALL CSS TIL HEADEREN*/
+
+
+
+
+/*////////////////////////////////////////////HER LIGGER ALL CSS TIL HEADEREN///////////////////////////////////////////////////////*/
+/*SELVE HEADEREN*/
+/*Her har jeg stilert headeren med forskjellige elementer, samnt laget flex i headeren*/
 #mainheader {
+  grid-area: header;
   background-color: #001E3C;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   max-width: 100%;
   margin-top: 0;
   margin-bottom: 15px;
-  z-index: 2;
   position: sticky;
+  z-index: 2;
   top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-#logoTop {
+
+
+/*LOGO I HEADEREN*/
+/*Sørget for at logoen ikke blir større enn dette*/
+.logoTop {
   max-width: 150px;
   max-height: 100px;
 }
 
+
+
+/*NAVELEMENTET*/
+/*Sørget for at navelementene ligger riktig samt laget en flex til navelementene*/
 #mainnav {
   margin-top: 1.5%;
   display: flex;
@@ -43,31 +67,48 @@ body {
   font-size: 2rem;
 }
 
+
+
+/*Sørget for at teksten er hvit og at det ikke er understrek på navelementene*/
 #mainnav a {
   text-decoration: none;
   color: white;
 }
 
+
+
+/*Sørget for at flexen på navelementene følger størrelse på skjermen*/
 #omOss {
   flex-grow: 1;
 }
 
-#sjekkVæret {
+#sjekkVaret {
   flex-grow: 1;
 }
 
-/*HER LIGGER ALL CSS TIL MAINCONTENT*/
+
+
+
+/*////////////////////////////HER LIGGER ALL CSS TIL MAINCONTENT///////////////////////////////////////////////////////////////////////*/
+/*MAINWRAPPEREN*/
+/*Har gitt en bakgrunnsfarge og andre stileringer.*/
 main {
+  grid-area: main;
   background-color: rgba(0,30,60, 0.9);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   width: 60%;
   margin: auto;
   padding: 0;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
   margin-top: 100px;
 }
 
+
+
+
+/*SKIP TO MAIN ELEMENTET!!!*/
+/*Sørget for at selve skip to main ikke syntes på skjermen og at den blir tabbet til først*/
 .skipToMain {
   padding: 10px;
   background-color: rgba(255, 255, 255, 1);
@@ -81,15 +122,25 @@ main {
 }
 
 
+
+/*BANNEREN*/
+/*Sørget for at banneren ikke har noe padding*/
 .bannerAeria{
   padding: 0;
 }
 
 
+
+/*HELE MAINARTIKKELEN*/
+/*Sørget for at artikkelen har padding*/
 .omDaily {
   padding: 10px;
 }
 
+
+
+/*MAIN ARTIKKELHEADER*/
+/*Sørget for at tekststørrelsen er 3*foreldreelementet og at det er margin til teksten som kommer under*/
 .artikkelMainHeader {
   font-size: 3rem;
   margin-bottom: 10px;
@@ -97,6 +148,8 @@ main {
 
 
 
+/*DE 2 ØVERSTE TEKSTENE*/
+/*Stillert teksten til å ligge til venstre, samt endret på tekststørrelse, marginer og paddinger*/
 .ovretekst{
   margin-bottom: 50px;
   text-align: left;
@@ -105,6 +158,9 @@ main {
 }
 
 
+
+/*NEDERSTE TEKSTEN*/
+/*Stillert teksten til å ligge til venstre, samt endret på tekststørrelse, marginer og paddinger*/
 .dailyGoal {
   text-align: left;
   font-size: 1rem;
@@ -112,28 +168,28 @@ main {
   margin-bottom: 20px;
 }
 
-#varNaatxt{
-  margin-bottom: 1%;
-}
 
 
-/*HER LIGGER ALL CSS TIL SIDESEKSJONEN*/
+/*////////////////////////////////////////////////////////////////HER LIGGER ALL CSS TIL SIDESEKSJONEN/////////////////////////////////*/
+/*SIDESEKSJON*/
+/*Gitt sideseksjonen en farge samt sørget for at den står fast på siden*/
 #sideseksjon {
-  background-color: #2b2b2b;
+  grid-area: sideseksjon;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 15px;
+  background-color: #001E3C;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  position: absolute;
-  right: 1%;
-  top: 26%;
-  width: 15%;
   border-radius: 5px;
 }
 
 
 
-
-
-/*UNDER HER LIGGER ALL CSS TIL FOOTER*/
+/*///////////////////////////////////////UNDER HER LIGGER ALL CSS TIL FOOTER//////////////////////////////////////////////////////*/
+/*SELVE FOOTEREN*/
+/*Gitt footeren en bakgrunnsfarge og sørget for at den strekker seg over hele siden*/
 #mainFooter{
+  grid-area: footer;
   background-color: #001E3C;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 100%;
@@ -141,7 +197,8 @@ main {
 
 
 
-
+/*FOOTERTEKSTEN*/
+/*Gitt footerteksten en størrelse i forhold til foreldreelementet*/
 #footerTxt{
   font-size: 1.2rem;
 }
@@ -150,7 +207,12 @@ main {
 
 
 
-/*CSS TIL varresultat.html!!!!!!!!!!!!!!*/
+
+
+
+/*///////////////////////////////////////////////////////CSS TIL varresultat.html!!!!!!!!!!!!!!///////////////////////////////////////////////*/
+/*MAINWRAPPEREN*/
+/*Gitt containeren et grid slik at alt inhold inni blir griddet*/
 .sjekkVaerContainer{
   display: grid;
   grid-template-rows: "1fr 1fr";
@@ -160,6 +222,10 @@ main {
   "varContainerInput varContainerOutput";
 }
 
+
+
+/*DEN ØVERSTE TEKSTEN*/
+/*Gitt området en plass i griddet samt sørget for at den får margin og padding*/
 .varInfo{
   grid-area: varInfo;
   margin-bottom: 40px;
@@ -168,11 +234,17 @@ main {
 
 
 
+/*INPUTOMRÅDET (INPUTBOKSEN OG KNAPPEN)*/
+/*Gitt området en plass i griddet samt gitt den en margin*/
 .varContainerInput{
   grid-area: varContainerInput;
   margin-bottom: 100px;
 }
 
+
+
+/*INPUTBOKSEN*/
+/*Gitt boksen en bakgrunnsfarge samt gitt den en størrelse og marginer. også stillert med radius*/
 #txtBy {
   background: rgba(252,252,252,1);
   width: 50%;
@@ -181,10 +253,12 @@ main {
   border-radius: 5px;
   margin-bottom: 15px;
   margin-top: 60px;
+  color: black;
 }
 
 
 
+/*KNAPPEN*/
 /*Her har jeg hentet ut en knapp fra siden http://buttonoptimizer.com/ . Det er derfor en enorm mengde kode*/
 #btnSjekk {
   display: inline-block;
@@ -230,14 +304,12 @@ main {
      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACqklEQVRIibWVT0gUYRjGf++3y7gKShAJhdpSJBUUFKy4OzcRiogiogiiS0GHMCW6ZCQhdrEgsLr1D4kOQZc8FHRoC3w1SCKhQ0R/NArKLl1a3M2+t8MajNqK7dZzmZmH4ffMM99870AFynve5z2HF7snXkmACEmg4b8FmDEBfPx9XfiJM6EXiFc5uhcNGBkZwczqgTWAA96IyFQmk8F7+AH1ZhwS+FbwBIGjYMJZ4Axw7jdH5oOz2SxBELQDPUAm8hAzwNOqxKcLm7bs3wfsFwgADN4BJ4BmoFagN3D4BQGjo6POe98LnAYmgOsi8tzMALYCR0R8clXDjemVDTdrEBArUsyYAfZWOYaizDkBqtoBXAauAcfDMJye99oSZjYgwtHG5MVcbd2LuPeBq66e9LF4LjDjHcaGqhiFBQGqWg+8BR4De8IwnPnT2qiqA+4BO0UEM8O5gl++4sF04+orgXO5LQgtIqw2YzK6yAeAGqC7FBwgDEOvqt1Awcxui0jO+2Db1y+7j+W+N/vk2r666prJHjOSwES0wR1gaywWW9fa2lqKX1KqumO22XnnXE86nfZQ/PxQ1Y1Aq4h8LgcO4Jy7DzwUkVPe+yezTJyqJoEskDCzq2XRgXQ6jYh0mdlJEWkGsqqaFFW9BewSkVQmk3ldbkBUqtoMPAOGHLADuPuv4ABhGL4G7gLbHVAHTP0reERTwDIHvATaVLWiwRfV8PBwHGgDXjpgQERagH5VTVQKV9WEiPQDLcCAzO7MAaCDYq1XgBcpbhEzY6nnZuaA9UA9cMXMugRgbGyMfD7fDhwEmgBXZoAHPgC3giB4lEqlSvTsHG+jc7ytYp/SP5ye2eOjCv3iqFioyBTvHB+kc3xwyf48lWrQFwlr+jt/KQGXNkerfgD7G3+OfgFtCB4IB3X/bAAAAABJRU5ErkJggg==") no-repeat left center transparent;
      background-size: 100% 100%;
  }
+/*/////////////HER STOPPER KNAPPEN!!!!!!///////////////////////////*/
 
 
 
-
-/*HER STOPPER KNAPPEN!!!!!!*/
-
-
-
+/*OUTPUT DER INFOEN KOMMER*/
+/*STillert området og gitt det en plass i griddet*/
 .varContainerOutput{
   grid-area: varContainerOutput;
   padding: 10px;
@@ -246,45 +318,104 @@ main {
   border-radius: 5px;
 }
 
-#txtBy{
-  color: black;
-}
 
 
-
+/*OUTPUT BYNAVNET*/
+/*Gitt teksten en størrelse i forhold til foreldreelementet samt gitt teksten en farge*/
 #byNavn{
   font-size: 4rem;
   color: #001E3C;
 }
 
 
+
+/*VÆRBESKRIVELSETEKSTEN*/
+/*Gitt teksten størrelse i forhold til foreldreelementet samt gitt teksten en farge*/
 #vaer{
   font-size: 3rem;
   color: #001E3C;
 }
 
 
+
+/*TEMPERATURTEKSTEN*/
+/*Gitt teksten størrelse i forhold til foreldreelementet samt gitt teksten en farge*/
 #temperatur{
   font-size: 3rem;
   color: #001E3C;
 }
 
+
+
+/*VINDHASTIGHETTEKSTEN*/
+/*Gitt teksten størrelse i forhold til foreldreelementet samt gitt teksten en farge*/
 #windspeed{
   font-size: 3rem;
   color: #001E3C;
 }
 
-.ikon{
-  :200px;
+
+
+/*//////////////////////////////////////////////////////////////SELVE SIDENE SIN STILLERING STOPPER HER/////////////////////////////////////////*/
+
+
+/*///////////////////////MEDIAQUERY FOR STORE MOBILER///////////////////////////////////////////////////*/
+@media screen and (min-width: 300px) and (max-width: 425px) {
+  /*Fjerner logoen øverst til høyre*/
+#logoTop2{
+  display: none;
+}
+
+/*NAVELEMENTENE*/
+/*Minsker teksten og tilpasser plasseringen*/
+#omOss{
+  font-size: 1.2rem;
+  margin-top: 16px;
+    margin-right: 40px;
+}
+
+/*Minsker teksten og tilpasser plasseringen*/
+#sjekkVaret{
+  font-size: 1.2rem;
+  margin-top: 16px;
+}
+
+/*Økt bredden på innholdet slik at det dekker hele telefonen*/
+main{
+  width: 100%;
+}
+
+/*Økt bredden på innholdet slik at det dekker hele telefonen*/
+#sideseksjon{
+  width: 100%
 }
 
 
-#varFooter{
-  position: relative;
-  background-color: #001E3C;
-  height: 30px;
-  margin-top: 105px;
-  clear: both;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  width: 100%;
+/*Økt størrelsen på artikkelteksten*/
+.ovretekst{
+  font-size: 1.5rem;
+}
+
+
+/*Økt størrelsen på artikkelteksten*/
+.dailyGoal{
+  font-size: 1.5rem;
+}
+
+
+/*Endret griddet til værsjekksidens artikkelinnhold*/
+.sjekkVaerContainer{
+  display: grid;
+  grid-template-rows: "1fr 1fr 1fr";
+  grid-template-areas:
+  "varInfo"
+  "varContainerOutput"
+  "varContainerInput";
+}
+
+
+/*Endret paddingen til outputen*/
+.varContainerOutput{
+  padding: 100px;
+}
 }

@@ -5,21 +5,21 @@ function oppstart() {
   document.getElementById("btnSjekk").onclick = sjekkVar;
 
 
-//Laget en funksjon for hva som skal skje når man trykker på knappen//
+  //Laget en funksjon for hva som skal skje når man trykker på knappen//
   function sjekkVar() {
-//Sørger for at temperaturutskriften blir nullstilt når et nytt søk skjer//
+    //Sørger for at temperaturutskriften blir nullstilt når et nytt søk skjer//
     document.getElementById("temperatur").innerHTML = "";
-//Henter ut byen brukeren har skrevet inn//
+    //Henter ut byen brukeren har skrevet inn//
     var brukerinput = document.getElementById("txtBy").value;
 
-//Henter ut JSON-dataen og adder på byen brukeren ønsker i URL'en slik at den søker etter nøyaktig den byen//
+    //Henter ut JSON-dataen og adder på byen brukeren ønsker i URL'en slik at den søker etter nøyaktig den byen//
     $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + brukerinput + "&units=metric&APPID=f24b8cf4b0fed17e80a7cf06fd8b3980",
-//Laget en funksjon som henter dataen slik at vi kan jobbe med den//
+      //Laget en funksjon som henter dataen slik at vi kan jobbe med den//
       function(data) {
-//Console.logger dataen slik at jeg kan få oversik over dataen når jeg skal plotte den ut til brukeren//
+        //Console.logger dataen slik at jeg kan få oversik over dataen når jeg skal plotte den ut til brukeren//
         console.log(data);
 
-//Laget variabler for alt jeg skal skrive ut. Deretter funnet ut hvor i JSON-dataen akkurat den informasjonen ligger//
+        //Laget variabler for alt jeg skal skrive ut. Deretter funnet ut hvor i JSON-dataen akkurat den informasjonen ligger//
         var by = data.name;
         var ikon = data.weather[0].icon + ".png";
         var vaer = data.weather[0].description;
@@ -27,10 +27,10 @@ function oppstart() {
         var vind = data.wind.speed;
 
 
-//Laget utskrifter som skal skrive ut dataen til brukeren//
+        //Laget utskrifter som skal skrive ut dataen til brukeren//
         document.getElementById("byNavn").innerHTML = by;
         $(".ikon").attr("src", ikon);
-        $(".ikon").attr("alt","illustration of weather");
+        $(".ikon").attr("alt", "illustration of weather");
         document.getElementById("vaer").innerHTML = vaer;
         document.getElementById("temperatur").innerHTML = temp + "&deg;C";
         document.getElementById("windspeed").innerHTML = vind + "M/S";
