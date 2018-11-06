@@ -4,24 +4,12 @@
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-  <title>DailyWeather - Forside</title>
+  <title>DailyWeather - Mainpage</title>
   <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
-  <script>
-
-window.onload = oppstart;
-
-function oppstart(){
-  document.getElementById("btnSjekk").onclick = varSjekk;
-}
-
-
-function varSjekk(){
-  var by = document.getElementById("txtBy").value;
-
-  localStorage.setItem("by");
-}
-
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="rgba(0,30,60, 0.9)"/>
+  <meta name="description" content="This is a website that helps you to check the current weather">
+  <script></script>
 </head>
 
 <body>
@@ -36,18 +24,27 @@ function varSjekk(){
   </header>
 
 
+
+
+<div class="skipToMain"><a href="#omDaily1">Skip to main content</a></div>
+
+
+
   <!--MAINCONTENT-->
   <main>
+    <section class="bannerAeria">
+          <img src="banner-obligx.png" alt="Banner with logo">
+    </section>
     <article class="omDaily" id="omDaily1">
       <h1 class="artikkelMainHeader">ABOUT US</h1>
       <h2>YOU ASK, WE CHECK!</h2>
-      <p class="omOsstxt">With great help from Open Weather Map we have the possibility to give you the most precise weather broadcast in the world!
+      <p class="ovretekst">With great help from Open Weather Map we have the possibility to give you the most precise weather broadcast in the world!
         According to thisisnotbullshit.com are we <strong>the most precise weather broadcast site on mother earth with a total of 99.9% perfect weather broadcasts.</strong>
         We hope that you will enjoy our page as much as you enjoy the result of your search.
       </p>
 
       <h2>OUR HISTORY</h2>
-      <p class="omOsstxt">
+      <p class="ovretekst">
         Weather have always been an important factor for us humans. All the way back to the early morning weather decided the daily activities to us humans. But as a difference from them, we can actually check the weather by just clicking on our
         phone.
         <br>
@@ -58,15 +55,9 @@ function varSjekk(){
       <h2>
         DAILYWEATHER`S GOAL
       </h2>
-      <p class="omOsstxt">
+      <p class="dailyGoal">
         DailyWeather wishes to give you the most precise weather broadcast and at the same time give them a smooth experience that you can enjoy!
       </p>
-    </article>
-
-    <article class="varmeldingNaa">
-      <h1 class="artikkelMainHeader">CHECK THE CURRENT WEATHER</h1>
-      <p id="varNaatxt" class="omOsstxt">Do you wish to check the current weather where you are now? Or maybe the current weather at the other side of the globe? Click on "CHECK WEATHER" below.</p>
-      </form>
     </article>
 
   </main>

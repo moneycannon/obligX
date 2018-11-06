@@ -4,8 +4,11 @@
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-  <title>DailyWeather - Forside</title>
+  <title>DailyWeather - Check current weather</title>
   <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="rgba(0,30,60, 0.9)"/>
+  <meta name="description" content="This is a website that helps you to check the current weather">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="index.js"></script>
 
@@ -23,10 +26,11 @@
   </header>
 
 
+<div class="skipToMain"><a href="#artikkelMainHeader">Skip to main content</a></div>
+
+
   <!--MAINCONTENT-->
   <main class="sjekkVaerContainer">
-
-
     <article class="varInfo">
       <h1 class="artikkelMainHeader">THE CURRENT WEATHER</h1>
       <p class="omOsstxt">Wonder about what the weather is in a city on the other side of the globe? Just write the cityname in the inputbox and click "CHECK WEATHER" and see the magic happen!</p>
@@ -43,6 +47,7 @@
       <img class="ikon">
       <p class="weather" id="vaer"></p>
       <p class="temp" id="temperatur"></p>
+      <p class="wind" id="windspeed"></p>
     </article>
 
   </main>

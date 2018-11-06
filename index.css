@@ -9,7 +9,7 @@
 }
 
 body {
-  background-image: url("Bakgrunn.jpg");
+  background-image: url("bakgrunn.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,14 +63,31 @@ main {
   border-radius: 5px;
   width: 60%;
   margin: auto;
-  padding: 5px;
-  padding-left: 10px;
-  margin-bottom: 15px;
-    margin-top: 100px;
+  padding: 0;
+  margin-bottom: 70px;
+  margin-top: 100px;
 }
 
+.skipToMain {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  width: 150px;
+  text-align: center;
+  z-index: 10;
+  /* plassering */
+  opacity: 0.1;
+  position: fixed;
+  left: -300px;
+}
+
+
+.bannerAeria{
+  padding: 0;
+}
+
+
 .omDaily {
-  margin-bottom: 50px;
+  padding: 10px;
 }
 
 .artikkelMainHeader {
@@ -78,10 +95,21 @@ main {
   margin-bottom: 10px;
 }
 
-.omOsstxt {
+
+
+.ovretekst{
+  margin-bottom: 50px;
   text-align: left;
-  margin-bottom: 5%;
-  font-size: 1.4rem;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+
+.dailyGoal {
+  text-align: left;
+  font-size: 1rem;
+  padding: 5px;
+  margin-bottom: 20px;
 }
 
 #varNaatxt{
@@ -95,7 +123,7 @@ main {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: absolute;
   right: 1%;
-  top: 21%;
+  top: 26%;
   width: 15%;
   border-radius: 5px;
 }
@@ -134,12 +162,15 @@ main {
 
 .varInfo{
   grid-area: varInfo;
+  margin-bottom: 40px;
+  padding: 10px;
 }
 
 
 
 .varContainerInput{
   grid-area: varContainerInput;
+  margin-bottom: 100px;
 }
 
 #txtBy {
@@ -238,15 +269,22 @@ main {
   color: #001E3C;
 }
 
+#windspeed{
+  font-size: 3rem;
+  color: #001E3C;
+}
+
 .ikon{
   :200px;
 }
 
 
 #varFooter{
-  position: absolute;
-  bottom: 0;
+  position: relative;
   background-color: #001E3C;
+  height: 30px;
+  margin-top: 105px;
+  clear: both;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 100%;
 }
