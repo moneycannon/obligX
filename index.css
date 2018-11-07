@@ -15,7 +15,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  grid-auto-rows: "1fr 1fr 1fr 1fr";
+  grid-template-rows: 110px 1fr 70px 50px;;
   grid-template-areas:
   "header"
   "main"
@@ -215,8 +215,8 @@ main {
 /*Gitt containeren et grid slik at alt inhold inni blir griddet*/
 .sjekkVaerContainer{
   display: grid;
-  grid-template-rows: "1fr 1fr";
-  grid-template-columns: "1fr 1fr";
+  grid-template-rows: 200px 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
   "varInfo varInfo"
   "varContainerInput varContainerOutput";
@@ -239,6 +239,12 @@ main {
 .varContainerInput{
   grid-area: varContainerInput;
   margin-bottom: 100px;
+}
+
+
+
+.labelInput{
+  font-size: 1.3rem;
 }
 
 
@@ -360,7 +366,7 @@ main {
 
 
 /*///////////////////////MEDIAQUERY FOR STORE MOBILER///////////////////////////////////////////////////*/
-@media screen and (min-width: 300px) and (max-width: 425px) {
+@media screen and (min-width: 1px) and (max-width: 600px) {
   /*Fjerner logoen øverst til høyre*/
 #logoTop2{
   display: none;
@@ -369,15 +375,17 @@ main {
 /*NAVELEMENTENE*/
 /*Minsker teksten og tilpasser plasseringen*/
 #omOss{
-  font-size: 1.2rem;
-  margin-top: 16px;
+  font-size: 1.4rem;
+  margin-top: 30px;
     margin-right: 40px;
+    margin-left: -50px;
 }
 
 /*Minsker teksten og tilpasser plasseringen*/
 #sjekkVaret{
-  font-size: 1.2rem;
-  margin-top: 16px;
+  font-size: 1.4rem;
+  margin-top: 30px;
+  margin-right: 30px;
 }
 
 /*Økt bredden på innholdet slik at det dekker hele telefonen*/
@@ -406,7 +414,8 @@ main{
 /*Endret griddet til værsjekksidens artikkelinnhold*/
 .sjekkVaerContainer{
   display: grid;
-  grid-template-rows: "1fr 1fr 1fr";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
   "varInfo"
   "varContainerOutput"
