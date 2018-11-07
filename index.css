@@ -15,7 +15,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  grid-template-rows: 110px 1fr 70px 50px;;
+  grid-template-rows: 110px 1fr 100px 100px;;
   grid-template-areas:
   "header"
   "main"
@@ -177,7 +177,7 @@ main {
   grid-area: sideseksjon;
   width: 60%;
   margin: auto;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   background-color: #001E3C;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
@@ -193,6 +193,7 @@ main {
   background-color: #001E3C;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 100%;
+  margin-top: 50px;
 }
 
 
@@ -201,6 +202,7 @@ main {
 /*Gitt footerteksten en størrelse i forhold til foreldreelementet*/
 #footerTxt{
   font-size: 1.2rem;
+  margin-top: 10px;
 }
 
 
@@ -365,8 +367,81 @@ main {
 /*//////////////////////////////////////////////////////////////SELVE SIDENE SIN STILLERING STOPPER HER/////////////////////////////////////////*/
 
 
+/*///////////////////////////MEDIAQUERY FOR STORE 4K SKJERMER!!!////////////////////////////////////////////////*/
+@media screen and (min-width: 2000px) and (min-height: 1000px){
+
+
+
+
+
+  /*Minsker teksten og tilpasser plasseringen*/
+  #omOss{
+    font-size: 2rem;
+  }
+
+  /*Minsker teksten og tilpasser plasseringen*/
+  #sjekkVaret{
+    font-size: 2rem;
+  }
+
+.omOsstxt{
+  font-size: 1.7rem;
+}
+
+
+/*Endret på footeren*/
+#mainFooter{
+  padding-bottom: 50px;
+  margin-top: 310px;
+}
+}
+
+
+
+/*///////////////////////MEDIAQUERY FOR TABLET///////////////////////////////////////////////////*/
+@media screen and (min-width: 426px) and (max-width: 769px){
+
+
+  /*Minsker teksten og tilpasser plasseringen*/
+  #omOss{
+    font-size: 1.9rem;
+    margin-top: 20px;
+  }
+
+  /*Minsker teksten og tilpasser plasseringen*/
+  #sjekkVaret{
+    font-size: 1.9rem;
+    margin-top: 20px;
+  }
+
+  /*Økt bredden på innholdet slik at det dekker hele telefonen*/
+  main{
+    width: 80%;
+  }
+
+  /*Økt bredden på innholdet slik at det dekker hele telefonen*/
+  #sideseksjon{
+    width: 80%
+  }
+
+  /*Endret griddet til værsjekksidens artikkelinnhold*/
+  .sjekkVaerContainer{
+    display: grid;
+    grid-template-rows: 200px 300px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "varInfo"
+    "varContainerInput"
+    "varContainerOutput";
+  }
+
+}
+
+
+
+
 /*///////////////////////MEDIAQUERY FOR STORE MOBILER///////////////////////////////////////////////////*/
-@media screen and (min-width: 1px) and (max-width: 600px) {
+@media screen and (min-width: 376px) and (max-width: 600px) {
   /*Fjerner logoen øverst til høyre*/
 #logoTop2{
   display: none;
@@ -414,17 +489,101 @@ main{
 /*Endret griddet til værsjekksidens artikkelinnhold*/
 .sjekkVaerContainer{
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px 1fr;
   grid-template-columns: 1fr;
   grid-template-areas:
   "varInfo"
-  "varContainerOutput"
-  "varContainerInput";
+  "varContainerInput"
+  "varContainerOutput";
 }
 
 
 /*Endret paddingen til outputen*/
 .varContainerOutput{
   padding: 100px;
+}
+
+
+/*Endret på footeren*/
+#mainFooter{
+  padding-bottom: 80px;
+  margin-top: 10px;
+}
+}
+
+
+
+/*//////////////////////////////////////////MEDIAQUERY FOR SMÅ ENHETER/////////////////////////////////////////////////////////*/
+@media screen and (min-width: 1px) and (max-width: 375px) {
+  /*Fjerner logoen øverst til høyre*/
+#logoTop2{
+  display: none;
+}
+
+/*Endrer størrelsen på logoen i headeren*/
+#logoTop1{
+  max-width: 100px;
+}
+
+/*NAVELEMENTENE*/
+/*Minsker teksten og tilpasser plasseringen*/
+#omOss{
+  font-size: 1.4rem;
+  margin-top: 30px;
+    margin-right: 40px;
+    margin-left: -50px;
+}
+
+/*Minsker teksten og tilpasser plasseringen*/
+#sjekkVaret{
+  font-size: 1.4rem;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+/*Økt bredden på innholdet slik at det dekker hele telefonen*/
+main{
+  width: 100%;
+}
+
+/*Økt bredden på innholdet slik at det dekker hele telefonen*/
+#sideseksjon{
+  width: 100%
+}
+
+
+/*Økt størrelsen på artikkelteksten*/
+.ovretekst{
+  font-size: 1.5rem;
+}
+
+
+/*Økt størrelsen på artikkelteksten*/
+.dailyGoal{
+  font-size: 1.5rem;
+}
+
+
+/*Endret griddet til værsjekksidens artikkelinnhold*/
+.sjekkVaerContainer{
+  display: grid;
+  grid-template-rows: 300px 300px 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "varInfo"
+  "varContainerInput"
+  "varContainerOutput";
+}
+
+
+/*Endret paddingen til outputen*/
+.varContainerOutput{
+  padding: 100px;
+}
+
+/*Endret på footeren*/
+#mainFooter{
+  padding-bottom: 80px;
+  margin-top: 10px;
 }
 }
